@@ -5,6 +5,7 @@ import com.finan.orcamento.repositories.OrcamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,7 +46,7 @@ public class OrcamentoService {
 
     //funções
     //Função calcula ICMS
-   /* public void calculoICMS(OrcamentoModel orcamentoModel) {
+   public void calculoICMS(OrcamentoModel orcamentoModel) {
         BigDecimal valorOrcamento = orcamentoModel.getValorOrcamento();
         String icmsEstados = orcamentoModel.getIcmsEstados().toString();
         BigDecimal icmsMG = new BigDecimal("0.18");
@@ -58,5 +59,5 @@ public class OrcamentoService {
         } else {
             orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsRJ));
         }
-    }*/
+    }
 }
