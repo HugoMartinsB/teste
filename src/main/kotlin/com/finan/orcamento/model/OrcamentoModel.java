@@ -27,6 +27,15 @@ public class OrcamentoModel implements Serializable {
     @Column(name="valor_orcamento")
     private BigDecimal valorOrcamento;
 
+    @NotNull
+    @Column(name="desconto_orcamento")
+    private BigDecimal descontoOrcamento;
+
+    @NotNull
+    @Column(name="QtdItens")
+    private BigDecimal qtdItens;
+
+
     @Column(name="valor_icms")
     private BigDecimal valorICMS;
 
