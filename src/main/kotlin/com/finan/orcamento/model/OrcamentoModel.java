@@ -27,7 +27,7 @@ public class OrcamentoModel implements Serializable {
     @Column(name="valor_orcamento")
     private BigDecimal valorOrcamento;
 
-    @Column(name="desconto_orcamento")
+    @Column(name="desconto_orcamento")//O valor inserido é calculado como porcentagem(ex:80 = 80%)
     private BigDecimal descontoOrcamento;
 
     @NotNull
@@ -41,8 +41,11 @@ public class OrcamentoModel implements Serializable {
     @Column(name="Final")
     private BigDecimal calculofinal;
 
+    private BigDecimal cent = BigDecimal.valueOf(100);
+
+
     public BigDecimal getCalculofinal() {
-       calculofinal = (valorOrcamento.multiply(qtdItens)).subtract(descontoOrcamento);
+       calculofinal = ((cent.subtract(descontoOrcamento)).divide(cent).multiply(valorOrcamento.multiply(qtdItens)));
         return calculofinal;
     }
 
