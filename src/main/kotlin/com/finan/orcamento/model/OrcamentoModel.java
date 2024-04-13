@@ -44,8 +44,9 @@ public class OrcamentoModel implements Serializable {
     private BigDecimal cent = BigDecimal.valueOf(100);
 
 
-    public BigDecimal getCalculofinal() {
+    public BigDecimal getCalculofinal() {//O desconto é feito pelo valor base, antes do ICMS
        calculofinal = ((cent.subtract(descontoOrcamento)).divide(cent).multiply(valorOrcamento.multiply(qtdItens)));
+       calculofinal = calculofinal.add(valorICMS);
         return calculofinal;
     }
 

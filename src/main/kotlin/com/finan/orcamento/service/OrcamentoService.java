@@ -50,14 +50,47 @@ public class OrcamentoService {
         BigDecimal valorOrcamento = orcamentoModel.getValorOrcamento();
         String icmsEstados = orcamentoModel.getIcmsEstados().toString();
         BigDecimal icmsMG = new BigDecimal("0.18");
-        BigDecimal icmsSP = new BigDecimal("0.12");
-        BigDecimal icmsRJ = new BigDecimal("0.17");
+        BigDecimal icmsSP = new BigDecimal("0.18");
+        BigDecimal icmsRJ = new BigDecimal("0.22");
+        BigDecimal icmsRS = new BigDecimal("0.17");
+        BigDecimal icmsPR = new BigDecimal("0.195");
+        BigDecimal icmsSC = new BigDecimal("0.17");
+        BigDecimal icmsBA = new BigDecimal("0.205");
+        BigDecimal icmsDF = new BigDecimal("0.20");
+        BigDecimal icmsGO = new BigDecimal("0.19");
+        BigDecimal icmsPA = new BigDecimal("0.19");
+        BigDecimal icmsMT = new BigDecimal("0.17");
+        BigDecimal icmsPE = new BigDecimal("0.205");
+        BigDecimal icmsCE = new BigDecimal("0.20");
+        BigDecimal icmsES = new BigDecimal("0.17");
         if (icmsEstados.equals("ICMS_MG")) {
             orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsMG));
         } else if (icmsEstados.equals("ICMS_SP")) {
             orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsSP));
-        } else {
+        } else if (icmsEstados.equals("ICMS_RJ")){
             orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsRJ));
+        } else if (icmsEstados.equals("ICMS_RS")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsRS));
+        } else if(icmsEstados.equals("ICMS_PR")){
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsPR));
+        } else if (icmsEstados.equals("ICMS_SC")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsSC));
+        } else if (icmsEstados.equals("ICMS_BA")){
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsBA));
+        } else if (icmsEstados.equals("ICMS_DF")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsDF));
+        } else if (icmsEstados.equals("ICMS_GO")){
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsGO));
+        } else if (icmsEstados.equals("ICMS_PA")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsPA));
+        } else if (icmsEstados.equals("ICMS_MT")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsMT));
+        } else if (icmsEstados.equals("ICMS_PE")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsPE));
+        } else if (icmsEstados.equals("ICMS_CE")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsCE));
+        } else if (icmsEstados.equals("ICMS_ES")) {
+            orcamentoModel.setValorICMS(valorOrcamento.multiply(icmsES));
         }
-    }
+   }
 }
