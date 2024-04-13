@@ -16,7 +16,20 @@ public enum IcmsEstados {
     ICMS_MT(new IcmsMT()),
     ICMS_PE(new IcmsPE()),
     ICMS_CE(new IcmsCE()),
-    ICMS_ES(new IcmsES());
+    ICMS_ES(new IcmsES()),
+    ICMS_MS(new IcmsMS()),
+    ICMS_AM(new IcmsAM()),
+    ICMS_MA(new IcmsMA()),
+    ICMS_RN(new IcmsRN()),
+    ICMS_PB(new IcmsPB()),
+    ICMS_AL(new IcmsAL()),
+    ICMS_PI(new IcmsPI()),
+    ICMS_RO(new IcmsRO()),
+    ICMS_SE(new IcmsSE()),
+    ICMS_TO(new IcmsTO()),
+    ICMS_AC(new IcmsAC()),
+    ICMS_AP(new IcmsAP()),
+    ICMS_RR(new IcmsRR());
 
 
     private final IcmsStrategy strategy;

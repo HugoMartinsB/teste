@@ -10,6 +10,20 @@ import org.jetbrains.annotations.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+/* EXEMPLO DA ESTRUTURA REQUEST DO ORCAMENTOS
+{
+    "icmsEstados":"ICMS_MA",
+    "valorOrcamento":1000,
+    "descontoOrcamento": 10,
+    "valorICMS":0.0,
+    "qtdItens":1.0,
+    "usuario": {
+        "id": 1
+        }
+}
+
+ */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
